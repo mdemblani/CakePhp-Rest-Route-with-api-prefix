@@ -9,10 +9,9 @@ supporting basic rest routes and I wanted it to be in the form
 http://www.xyz.com/api/version_number/controller/action   
 that would support basic rest routes with prefix including api and version number.
 
-To achieve this there are two ways:
-1. Create routes using **Router::connect** for each function and list them down manually in your routes.php file.
-2. The second options (which I used) is a small hack was made in the core cakephp2 lib *Router* class *mapResource* function located at  
-**Path to CakePhp App Folder/lib/Cake/Routing/Router.php** as follows
+To achieve this there are two ways:  
+1. Create routes using **Router::connect** for each function and list them down manually in your routes.php file.  
+2. The second options (which I used) is a small hack was made in the core cakephp2 lib *Router* class *mapResource* function located at **Path to CakePhp App Folder/lib/Cake/Routing/Router.php** as follows:
 
 Intially the function was as follows:
 ```php
@@ -82,7 +81,7 @@ Intially the function was as follows:
 	}
 ```
 	
-to the following:  
+Change it to the following(replace that code with the following one):  
 	
 ```php
 /**
